@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+
+<nav>
+    <button onclick="window.location.href='index.html'">Journal</button>
+    <button onclick="window.location.href='statistics.html'">Statistics</button>
+</nav>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Daily Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Daily Journal</h1>
+        <form id="journalForm">
+            <div class="prompt">
+                <label for="stressLevel">On a scale from 1 to 5, how stressed do you feel today?</label><br>
+                <input type="number" id="stressLevel" name="stressLevel" min="1" max="5">
+            </div>
+            <div class="prompt">
+                <label for="happyLevel">On a scale from 1 to 5, how happy do you feel today?</label><br>
+                <input type="number" id="happyLevel" name="happyLevel" min="1" max="5">
+            </div>
+            <div class="prompt">
+                <label for="exercise">Did you exercise today? (Yes/No)</label><br>
+                <select id="exercise" name="exercise">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="prompt">
+                <label for="reflection">Reflections on your day:</label><br>
+                <textarea id="reflection" name="reflection" rows="4" cols="50"></textarea>
+            </div>
+            <button type="button" onclick="saveJournalEntry()">Save Entry</button>
+        </form>
+        <button onclick="window.location.href='statistics.html'">See My Journaling Habits</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
